@@ -55,5 +55,5 @@ fn main() {
     //lab1::info();
     //println!("{}",lab2a::met_newt_loop(0.5, 0.00001, 4));
     //println!("{}",lab2a::met_newt_recursive(0.5, 0.00001, 4, 0));
-    lab2b::print_ascii();
+    println!("{}",lab2b::collatz_steps(12, 0));
 }

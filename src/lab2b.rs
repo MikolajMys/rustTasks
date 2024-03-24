@@ -23,9 +23,19 @@ pub fn print_ascii() {
 }
 //Zadanie 3 Napisz funkcję, która dla danego całkowitego dodatniego n zwraca numer iteracji,
 // w której osiągamy jedynkę w problemie Collatza (np. dla n=12 wynikiem jest 9):
-// pub fn collatz_steps(i:u128, step:u128) -> u128{
-//
-// }
+pub fn collatz_steps(i:u128, mut step:u128) -> u128{
+    if i != 1{
+        if i % 2 == 0{
+            step += 1;
+            collatz_steps(i/2, step)
+        } else{
+            step += 1;
+            collatz_steps(3 * i + 1, step)
+        }
+    } else{
+        step
+    }
+}
 //Zadanie 4 Napisz funkcję, która odpowiada na pytanie, czy jej argument jest liczbą Armstronga:
 
 //Zadanie 5 Napisz funkcję, która odpowiada na pytanie, czy jej argument jest liczbą doskonałą:
