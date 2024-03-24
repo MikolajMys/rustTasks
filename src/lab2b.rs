@@ -37,6 +37,30 @@ pub fn collatz_steps(i:u128, mut step:u128) -> u128{
     }
 }
 //Zadanie 4 Napisz funkcję, która odpowiada na pytanie, czy jej argument jest liczbą Armstronga:
+fn count_digits(n:u128) -> u128{
+    let mut num:u128 = n;
+    let mut sum:u128 = 0;
+    while num > 0{
+        sum += 1;
+        num /= 10;
+    }
+    sum
+}
+pub fn is_armstrong_num(n:u128){
+    let mut count:u128 = count_digits(n);
+    let mut num:u128 = n;
+    let mut sum:u128 = 0;
+    while num > 0{
+        let digit = num % 10;
+        sum += digit**count;
+        num /= 10;
+    }
+    if sum == n{
+        println!("Yes");
+    } else{
+        println!("No");
+    }
+}
 
 //Zadanie 5 Napisz funkcję, która odpowiada na pytanie, czy jej argument jest liczbą doskonałą:
 
