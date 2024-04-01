@@ -52,7 +52,7 @@ pub fn is_armstrong_num(n:u128){
     let mut sum:u128 = 0;
     while num > 0{
         let digit = num % 10;
-        sum += digit**count;
+        sum += digit.pow(count as u32);//** daje błąd
         num /= 10;
     }
     if sum == n{
@@ -63,7 +63,24 @@ pub fn is_armstrong_num(n:u128){
 }
 
 //Zadanie 5 Napisz funkcję, która odpowiada na pytanie, czy jej argument jest liczbą doskonałą:
-
+fn find_dividers(n:u128) -> Vec<u128>{
+    let mut dividers: Vec<u128> = Vec::new();
+    for i in 1..n{
+        if n % i == 0{
+            dividers.push(i);
+        }
+    }
+    dividers
+}
+pub fn is_perf_num(n:u128) {
+    let dividers: Vec<u128> = find_dividers(n);
+    let sum: u128 = dividers.iter().sum();
+    if sum == n{
+        println!("Yes")
+    } else {
+        println!("No");
+    }
+}
 //Zadanie 6 Napisz funkcję, która wyświetli rozkład podanej liczby na czynniki pierwsze:
 
 //Zadanie 7 Napisz funkcję pow_mod(x: u128, n: u128, p: u128) -> u128,
