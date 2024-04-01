@@ -82,6 +82,17 @@ pub fn is_perf_num(n:u128) {
     }
 }
 //Zadanie 6 Napisz funkcję, która wyświetli rozkład podanej liczby na czynniki pierwsze:
-
+pub fn prime_factors(mut n: u64) {
+    let mut factor = 2;
+    while n > 1 {
+        if n % factor == 0 {
+            print!("{} ", factor);
+            while n % factor == 0 {
+                n /= factor;
+            }
+        }
+        factor += 1;
+    }
+}
 //Zadanie 7 Napisz funkcję pow_mod(x: u128, n: u128, p: u128) -> u128,
-// która obliczy (xn)%p w taki sposób, by działało to prawidłowo dla jak największych danych:
+// która obliczy (x^n)%p w taki sposób, by działało to prawidłowo dla jak największych danych:
