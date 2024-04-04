@@ -58,11 +58,13 @@ fn main() {
     //lab2b::is_armstrong_num(153);
     //lab2b::is_perf_num(496);
     //lab2b::prime_factors(84);
+    println!("{}",lab2b::pow_mod(5,3,13));
     let x: i32 = 3;
     let y: i32 = 2;
     let z: i32 = 5;
     // println!("przed x:{x} y:{y}");
     // lab3::swap_two_args(&mut x, &mut y);
     // println!("po x:{x} y:{y}");
-    lab3::swap_sort_three_args(x, y, z);
+    //lab3::swap_sort_three_args(x, y, z);
+
 }

@@ -96,3 +96,15 @@ pub fn prime_factors(mut n: u64) {
 }
 //Zadanie 7 Napisz funkcję pow_mod(x: u128, n: u128, p: u128) -> u128,
 // która obliczy (x^n)%p w taki sposób, by działało to prawidłowo dla jak największych danych:
+pub fn pow_mod(mut x: u128, mut n: u128, p: u128) -> u128 {
+    let mut result: u128 = 1;
+    //let mut x_mod: u128 = x % p; // Obliczamy x % p, aby uniknąć przekroczenia zakresu
+    while n > 0 {
+        if n % 2 == 1 {
+            result *= x;
+        }
+        x *= x;
+        n /= 2
+    }
+    result % p
+}
