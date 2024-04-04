@@ -29,7 +29,11 @@ pub fn swap_sort_three_args(x: i32, y: i32, z: i32){
 }
 //Zadanie 3 Stwórz generator liczb pseudolosowych, którego ziarno przechowywane będzie na zewnątrz i podawane w pierwszym parametrze, a w parametrze drugim i trzecim podawany będzie przedział losowanych liczb.
 // fn rand(seed: &mut ..., min_rand: ..., max_rand: ...) -> ...:
-
+pub fn rand(seed: &mut i128, min_rand: i128, max_rand: i128) -> i128{
+    *seed = (60 * *seed + 50) % 4355;
+    //println!("{}", *seed);
+    *seed % (max_rand-min_rand+1) + min_rand
+}
 //Zadanie 4 Napisz funkcję swap_arr(arr: ..., i: usize, j: usize),
 // która zamieni wartości dwóch podanych elementów pewnej tablicy:
 
