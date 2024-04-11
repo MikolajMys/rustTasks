@@ -75,8 +75,8 @@ fn main() {
     //lab3::swap_arr(&mut arr, 1, 5);
     //lab3::rand_perm(&mut arr, &mut seed);
     //println!("{:?}", arr);
-    let s0 = String::from("abcdef");
-    let s1 = lab4b::backwards(&s0);
-    println!("{s1}");
+    // let s0 = String::from("abcdef");
+    // let s1 = lab4b::backwards(&s0);
+    // println!("{s1}");
 
 }
