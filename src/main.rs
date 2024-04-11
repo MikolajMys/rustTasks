@@ -69,5 +69,9 @@ fn main() {
     let mut seed = 211537;
     let min = 5;
     let max = 15;
-    println!("{},{},{}", lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max));
+    //println!("{},{},{}", lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max));
+    let mut arr: [i32;5] = [1,2,3,4,5];
+    println!("{:?}", arr);
+    lab3::swap_arr(&mut arr, 1, 5);
+    println!("{:?}", arr);
 }

@@ -36,6 +36,26 @@ pub fn rand(seed: &mut i128, min_rand: i128, max_rand: i128) -> i128{
 }
 //Zadanie 4 Napisz funkcję swap_arr(arr: ..., i: usize, j: usize),
 // która zamieni wartości dwóch podanych elementów pewnej tablicy:
+pub fn swap_arr(arr: &mut [i32;5], i: usize, j: usize){
+    let temp: i32 = arr[i-1];
+    arr[i-1] = arr[j-1];
+    arr[j-1] = temp;
+}
 
 //Zadanie 5 Stwórz funkcję rand_perm(arr: ..., seed: ...),
 // permutującą w miejscu w sposób losowy wartości tablicy przekazanej w argumencie:
+
+//Inna wersja zadań:
+//Zad 1 Napisz funkcję d2((x, y), (x, y)) -> f32, która obliczy dystans pomiędzy punktami w przestrzeni R^2.
+
+//Zad 2 Napisz funkcję d3((x, y, z), (x, y, z)) -> f32, która obliczy dystans pomiędzy punktami w przestrzeni R^3.
+
+//Zad 3 Stwórz tablicę N elementów, którą wypełnisz resztami z dzielenia liczby 100 przez kolejne liczby naturalne. Następnie wyświetl kolejne wartości tablicy od końca.
+
+//Zad 4 Napisz funkcję avg(&[u32]) -> f32, która obliczy średnią arytmetyczną liczb z tablicy.
+
+//Zad 5 Napisz funkcję sort(... u32, ... u32, ... u32), która rosnąco posortuje przekazane jej argumenty.
+
+//Zad 6 Napisz funkcję swap_range(... [u32], (a1, a2), (b1, b2)), która zamieni miejscami elementy,
+
+//Zad 7 leżące w podanych przedziałach; jeśli przedziały mają różną długość, ogranicz się do długości krótszego z nich:
