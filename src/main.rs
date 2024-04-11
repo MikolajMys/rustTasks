@@ -1,9 +1,9 @@
 mod lab1;
 mod lab2a;
+mod lab2b;
 mod lab3;
 mod lab4a;
-mod lab2b;
-
+mod lab4b;
 
 
 // fn zad3(){
@@ -42,17 +42,6 @@ fn sort(a:&mut u32, b:&mut u32, c:&mut u32){
 //     let temp:[usize;len];
 //
 // }
-// fn wizytowka(imie: &String, nazwisko: &String) -> String{
-//     return ;
-// }
-// fn backwards(s0:&String){
-//     let mut s2 = String::new();
-//
-//     for c in s0.chars().rev() {
-//         s2.push(c);
-//     }
-//     println!("{}", s2);
-// }
 
 fn main() {
     // let mut j= 0;
@@ -86,8 +75,8 @@ fn main() {
     //lab3::swap_arr(&mut arr, 1, 5);
     //lab3::rand_perm(&mut arr, &mut seed);
     //println!("{:?}", arr);
-    //let s0 = String::from("abc");
-    //backwards(&s0);
-    println!("sss");
+    let s0 = String::from("abcdef");
+    let s1 = lab4b::backwards(&s0);
+    println!("{s1}");
 
 }
