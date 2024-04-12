@@ -71,12 +71,14 @@ fn main() {
     // let max = 15;
     //println!("{},{},{}", lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max), lab3::rand(&mut seed, min, max));
     let mut arr: [i32;5] = [1,2,3,4,5];
-    println!("{:?}", arr);
+    //println!("{:?}", arr);
     //lab3::swap_arr(&mut arr, 1, 5);
-    lab3::rand_perm(&mut arr, &mut seed);
-    println!("{:?}", arr);
+    //lab3::rand_perm(&mut arr, &mut seed);
+    //println!("{:?}", arr);
     // let s0 = String::from("abcdef");
     // let s1 = lab4b::backwards(&s0);
     // println!("{s1}");
-
+    let  n = 12345;
+    let x = lab2b::met_newt_loop(lab2b::f, lab2b::fp, 0.5, 0.00001, 4);
+    println!("{x}");
 }

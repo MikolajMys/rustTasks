@@ -1,8 +1,8 @@
 //Zadanie 1 z zestawu 2a zmodyfikuj funkcje tak,
 // by obliczenia były prowadzone nie dla sztywno zakodowanych funkcji i ich pochodnych,
 // lecz by funkcję i pochodną można było przekazać do funkcji:
-fn f(x: f64) -> f64{x*x-2.0}
-fn fp(x: f64) -> f64{2.0*x}
+pub fn f(x: f64) -> f64{x*x-2.0}
+pub fn fp(x: f64) -> f64{2.0*x}
 pub fn met_newt_loop(f1:fn(f64) -> f64, f2:fn(f64) -> f64, x0:f64, eps:f64, n:u128) -> f64{
     let mut x = x0;
     let mut i = 0;
