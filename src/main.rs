@@ -4,6 +4,7 @@ mod lab2b;
 mod lab3;
 mod lab4a;
 mod lab4b;
+mod kolokwium1;
 
 
 // fn zad3(){
@@ -80,5 +81,12 @@ fn main() {
     // println!("{s1}");
     let  n = 12345;
     let x = lab2b::met_newt_loop(lab2b::f, lab2b::fp, 0.5, 0.00001, 4);
-    println!("{x}");
+    //println!("{x}");
+    let mut array1:[u32;9] = [5,8,2,0,6,4,7,1,9];
+    let x1:u32 = kolokwium1::find(&mut array1);
+    println!("dla {:?} -> {}",array1,x1);
+    let mut arr1:[u32;3] = [7,1,2];
+    println!("{:?}", arr1);
+    kolokwium1::reverse(&mut arr1);
+    println!("{:?}", arr1);
 }
