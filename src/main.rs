@@ -84,9 +84,11 @@ fn main() {
     //println!("{x}");
     let mut array1:[u32;9] = [5,8,2,0,6,4,7,1,9];
     let x1:u32 = kolokwium1::find(&mut array1);
-    println!("dla {:?} -> {}",array1,x1);
+    //println!("dla {:?} -> {}",array1,x1);
     let mut arr1:[u32;3] = [7,1,2];
-    println!("{:?}", arr1);
+    //println!("{:?}", arr1);
     kolokwium1::reverse(&mut arr1);
-    println!("{:?}", arr1);
+    //println!("{:?}", arr1);
+    println!("{}", lab4a::liczba_wystapien("bambusowaća", 'a'));
+
 }
