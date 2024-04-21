@@ -5,6 +5,7 @@ mod lab3;
 mod lab4a;
 mod lab4b;
 mod kolokwium1;
+mod lab6a;
 
 
 // fn zad3(){
