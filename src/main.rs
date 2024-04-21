@@ -90,6 +90,7 @@ fn main() {
     //println!("{:?}", arr1);
     kolokwium1::reverse(&mut arr1);
     //println!("{:?}", arr1);
-    println!("{}", lab4a::liczba_wystapien("bambusowaća", 'a'));
-
+    //println!("{}", lab4a::liczba_wystapien("bambusowaća", 'a'));
+    let s0 = lab4b::co_drugi_znak("n1a2p3i4s".to_string());
+    println!("{s0}");
 }

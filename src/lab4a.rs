@@ -10,4 +10,4 @@ pub fn liczba_wystapien(napis: &str, znak: char) -> i32{
     sum
 }
 //Zadanie 2 Napisz funkcję o nagłówku fn rzymskie(napis: ...) -> ..., która dla napisu reprezentującego liczbę
-// w zapisie rzymskim zwraca liczbę reprezentowaną przez ów napis: Przykład: // rzymskie("III") == 3
+// w zapisie rzymskim zwraca liczbę reprezentowaną przez ów napis: Przykład: rzymskie("III") == 3
