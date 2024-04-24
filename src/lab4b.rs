@@ -7,7 +7,10 @@ pub fn co_drugi_znak(napis: String) -> String{
 //Zadanie 2 Zdefiniuj funkcję o nagłówku: fn szyfruj(napis: ..., klucz: ...) -> ...
 // która dla danego napisu zwróci ten sam napis zaszyfrowany prostym szyfrem odwracającym — klucz określa długość odwracanych fragmentów.
 // Przykład: szyfruj("Aladyn", 2) == "lAdany":
-
+// fn szyfruj(napis: &str, klucz: i32) -> String{
+//     let mut s: String = String::new();
+//
+// }
 
 //Zadanie 3 Napisz funkcję wizytowka, która otrzymuje w dwóch parametrach napisowych imię i nazwisko,
 // a zwraca napis powstały z pierwszej litery imienia, kropki, spacji i nazwiska, przy czym w wyniku
@@ -25,7 +28,15 @@ pub fn co_drugi_znak(napis: String) -> String{
 
 //Dodatkowe:
 //Zadanie 1 Napisz funkcję, zliczającą liczbę wystąpień pewnego znaku w napisie:
-
+pub fn count_letters(napis: &str, letter: char) -> i32{
+    let mut sum :i32 = 0;
+    for c in napis.chars(){
+        if c == letter{
+            sum += 1;
+        }
+    }
+    sum
+}
 
 //Zadanie 2 Napisz funkcję, przyjmującą w argumencie napis i zwracającą ten sam napis, czytany od tyłu:
 pub fn backward(napis: &str) -> String{

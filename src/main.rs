@@ -93,5 +93,7 @@ fn main() {
     //println!("{}", lab4a::liczba_wystapien("bambusowaća", 'a'));
     let s0 = lab4b::co_drugi_znak("n1a2p3i4s".to_string());
     let s1 = lab4b::backward("apłam");
-    println!("{s1}");
+    //println!("{s1}");
+    let x0 = lab4b::count_letters("bambusowaća", 'a');
+    println!("{x0}");
 }
