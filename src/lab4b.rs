@@ -28,3 +28,10 @@ pub fn co_drugi_znak(napis: String) -> String{
 
 
 //Zadanie 2 Napisz funkcję, przyjmującą w argumencie napis i zwracającą ten sam napis, czytany od tyłu:
+pub fn backward(napis: &str) -> String{
+    let mut s0:String = String::new();
+    for c in napis.chars().rev(){
+        s0.push(c);
+    }
+    s0
+}
