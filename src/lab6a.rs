@@ -45,7 +45,21 @@
 // która przyjmie tablicę liczb zapisanych w postaci napisów w systemach dziesiętnym i szesnastkowym.
 // Funkcja powinna rozpoznać system, w którym zapisana jest liczba i przekonwertować ją do zmiennej typu u32.
 // Przyjmij, że liczby szesnastkowe oznaczone są prefiksem 0x. Nie wszystkie napisy muszą być poprawne; zadbaj o obsługę błędów:
-
+pub fn rozne_liczby(arr: &[&str], out: &mut [Result<u32, u32>]){
+    for (i, &s) in arr.iter().enumerate(){
+        if s.starts_with("0x"){
+            let new = &s[2..];
+            let x:Result<u32,u32> = Ok(u32::from_str_radix(new, 16).unwrap());
+            out[i] = x;
+        } else {
+            let x = s.parse::<u32>();
+            match x {
+                Ok(val) => out[i] = Ok(val),
+                Err(_) => out[i] = Err(0),
+            }
+        }
+    }
+}
 
 //Zadanie 8 Napisz funkcję dodaj_pisemnie(a: &str, b: &str) -> Result<String, String>,
 // która pisemnie doda dwie, dowolnie duże liczby naturalne. Jeśli któryś z napisów nie jest liczbą,

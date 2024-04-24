@@ -95,5 +95,9 @@ fn main() {
     let s1 = lab4b::backward("apłam");
     //println!("{s1}");
     let x0 = lab4b::count_letters("bambusowaća", 'a');
-    println!("{x0}");
+    //println!("{x0}");
+    let arr:[&str;3] = ["1","0xA","2.2"];
+    let mut out:[Result<u32, u32>;3] = [Err(0);3];
+    lab6a::rozne_liczby(&arr, &mut out);
+    println!("{:?}", out);
 }
