@@ -91,6 +91,8 @@ fn main() {
     //println!("{s1}");
     let x0 = lab4b::count_letters("bambusowaća", "a");
     //println!("{x0}");
+    let s2: String = lab4b::dodaj_pisemnie("24872947", "294729478");
+    println!("{s2}");
     let arr:[&str;3] = ["1","0xA","2.2"];
     let mut out:[Result<u32, u32>;3] = [Err(0);3];
     lab6a::rozne_liczby(&arr, &mut out);

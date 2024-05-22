@@ -64,7 +64,7 @@ pub fn wizytowka(imie: &str, nazwisko: &str) -> String{
 //     s
 }
 //Zadanie 3 Napisz funkcję, która na podstawie napisu tworzy napis, zawierający co drugi znak napisu podanego w argumencie:
-pub fn skipTwo(text: &str) -> String{
+pub fn skip_two(text: &str) -> String{
     //text.chars().step_by(2).collect()
     let mut z: String = String::new();
     for c in text.chars().step_by(2){
@@ -77,7 +77,7 @@ pub fn reverse(text: &str) -> String{
     //text.chars().rev().collect()
     let mut y = String::new();
     for i in 0..text.len() {
-        y.push(text.chars().nth(text.len() - i - 1).unwrap());
+        y.push(text.chars().nth(text.len() - i - 1).unwrap_or('0'));
     }
     y
 }
@@ -103,29 +103,27 @@ pub fn szyfruj(napis: &str, klucz: usize) -> String{
     }
     code
 }
-//Napisz funkcję o nagłówku fn dodaj_pisemnie(a: ..., b: ...) -> ...
+//Zadanie 6 Napisz funkcję o nagłówku fn dodaj_pisemnie(a: ..., b: ...) -> ...
 // która doda dwie (zakładamy, że poprawne) liczby całkowite podane w argumentach jako napisy w zapisie dziesiętnym —
 // i zwróci wynik również jako napis. Przykład:("1", "3") == "4":
-pub fn dodaj_pisemnie(a: &str, b: &str) -> String{
-    let mut result: String = String::new();
+pub fn dodaj_pisemnie(a: &str, b: &str) -> String {
+    let mut result = String::new();
     let mut carry = 0;
-    let mut sum = 0;
-    let mut max_len = 0;
-    let ar = a.chars().rev().collect().as_str();
-    let br = b.chars().rev().collect().as_str();
-    if a.len() > b.len(){
-        max_len = a.len();
-    } else{
-        max_len = b.len();
-    }
-
-    for i in 0..max_len{
-        sum = ar.chars().nth(i).parse() + br.chars().nth(i).parse() + carry;
-        result.push_str(sum % 10.as_str());
+    let max_len = std::cmp::max(a.len(), b.len());
+    let mut ar: Vec<char> = a.chars().rev().collect();
+    let mut br: Vec<char> = b.chars().rev().collect();
+    ar.resize(max_len, '0');
+    br.resize(max_len, '0');
+    for i in 0..max_len {
+        let temp_a = ar[i].to_digit(10).unwrap_or(0);
+        let temp_b = br[i].to_digit(10).unwrap_or(0);
+        let sum = temp_a + temp_b + carry;
+        //result.push_str(&(sum % 10).to_string());
+        result.push(std::char::from_digit((sum % 10), 10).unwrap());
         carry = sum / 10;
     }
-    if carry > 0{
-        result.push_str(carry.as_str());
+    if carry > 0 {
+        result.push_str(&carry.to_string());
     }
-    result
+    result.chars().rev().collect()
 }
