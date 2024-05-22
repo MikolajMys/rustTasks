@@ -55,14 +55,14 @@ pub fn rand_perm(arr: &mut [i32], seed: &mut i128){
 //Inna wersja zadań:
 
 //Zad 1 Napisz funkcję d2((x, y), (x, y)) -> f32, która obliczy dystans pomiędzy punktami w przestrzeni R^2:
-fn d2(x1:(i32, i32), x2:(i32, i32)) -> f32{
+pub fn d2(x1:(i32, i32), x2:(i32, i32)) -> f32{
     let a:f32 = (x1.0 - x2.0) as f32;
     let b:f32 = (x1.1 - x2.1) as f32;
     let sum:f32 = a*a + b*b;
     sum.sqrt()
 }
 //Zad 2 Napisz funkcję d3((x, y, z), (x, y, z)) -> f32, która obliczy dystans pomiędzy punktami w przestrzeni R^3:
-fn d3(x1:(i32, i32, i32), x2:(i32, i32, i32)) -> f32{
+pub fn d3(x1:(i32, i32, i32), x2:(i32, i32, i32)) -> f32{
     let a:f32 = (x1.0 - x2.0) as f32;
     let b:f32 = (x1.1 - x2.1) as f32;
     let c:f32 = (x1.2 - x2.2) as f32;
@@ -70,7 +70,7 @@ fn d3(x1:(i32, i32, i32), x2:(i32, i32, i32)) -> f32{
     sum.sqrt()
 }
 //Zad 3 Stwórz tablicę N elementów, którą wypełnisz resztami z dzielenia liczby 100 przez kolejne liczby naturalne. Następnie wyświetl kolejne wartości tablicy od końca:
-fn division_rest(arr:&mut[i32], n:usize){
+pub fn division_rest(arr:&mut[i32], n:usize){
 
 //println!("{:?}", arr);
     for i in 1..=n{
@@ -85,7 +85,7 @@ fn division_rest(arr:&mut[i32], n:usize){
     }
 }
 //Zad 4 Napisz funkcję avg(&[u32]) -> f32, która obliczy średnią arytmetyczną liczb z tablicy:
-fn avg(array:&[u32]) -> f32{
+pub fn avg(array:&[u32]) -> f32{
     let n = array.len();
 //let sum: u32 = array.iter().sum();
 //sum as f32 / n as f32
@@ -96,7 +96,7 @@ fn avg(array:&[u32]) -> f32{
     sum as f32 / n as f32
 }
 //Zad 5 Napisz funkcję sort(... u32, ... u32, ... u32), która rosnąco posortuje przekazane jej argumenty:
-fn sort(a:&mut u32, b:&mut u32, c:&mut u32){
+pub fn sort(a:&mut u32, b:&mut u32, c:&mut u32){
 // println!("{a},{b},{c}");
 // if a > b {
 // let temp: u32 = *a;
@@ -124,7 +124,7 @@ fn sort(a:&mut u32, b:&mut u32, c:&mut u32){
 }
 //Zad 6 Napisz funkcję swap_range(... [u32], (a1, a2), (b1, b2)), która zamieni miejscami elementy,
 // leżące w podanych przedziałach; jeśli przedziały mają różną długość, ogranicz się do długości krótszego z nich:
-fn swap_range(array:&mut [u32], x1:(usize,usize), x2:(usize,usize)){
+pub fn swap_range(array:&mut [u32], x1:(usize,usize), x2:(usize,usize)){
     let mut range1 = x1;
     let mut range2 = x2;
 

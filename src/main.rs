@@ -7,11 +7,6 @@ mod lab4b;
 mod kolokwium1;
 mod lab6a;
 
-
-// fn zad3(){
-//     const N: usize = 30;
-// }
-
 fn avg(array:&[u32]) -> f32{
     let mut sum = 0;
     for i in 0..array.len(){
@@ -92,12 +87,14 @@ fn main() {
     //println!("{:?}", arr1);
     //println!("{}", lab4a::liczba_wystapien("bambusowaća", 'a'));
     let s0 = lab4b::co_drugi_znak("n1a2p3i4s".to_string());
-    let s1 = lab4b::backward("apłam");
+    let s1 = lab4b::reverse("apłam");
     //println!("{s1}");
-    let x0 = lab4b::count_letters("bambusowaća", 'a');
+    let x0 = lab4b::count_letters("bambusowaća", "a");
     //println!("{x0}");
     let arr:[&str;3] = ["1","0xA","2.2"];
     let mut out:[Result<u32, u32>;3] = [Err(0);3];
     lab6a::rozne_liczby(&arr, &mut out);
-    println!("{:?}", out);
+    //println!("{:?}", out);
+
+
 }
